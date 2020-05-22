@@ -17,12 +17,9 @@ query = "啲哋嘢咩靚呢嗰唔佢你我係嘅咗咁架冇同咩哋幾啦畀�
 # 蚊 晝 瞓 嘥 佬 拎 舊 攰 啱 噚 叻 吓 冧 呃
 # 的 們 那 這 哪 在 不 是 了 些 他 她
 
-webs = []
-
 for keyword in query:
     print(f"Searching {keyword}")
     for web in search(keyword, tld='com', num=1, start=0, stop=None, pause=5): 
-        webs.append(web)
         with open("websites.txt", "a") as f:
-            print(webs, file=f) 
-            webs = []
+            print(web, file=f)
+
