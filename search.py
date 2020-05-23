@@ -19,7 +19,7 @@ query = "啲哋嘢咩靚呢嗰唔佢你我係嘅咗咁架冇同咩哋幾啦畀�
 
 for keyword in query:
     print(f"Searching {keyword}")
-    for web in search(keyword, tld='com', num=1, start=0, stop=None, pause=5): 
+    for web in search(keyword, tld='com', num=300, start=0, stop=None, pause=30): 
         with open("websites.txt", "a") as f:
             print(web, file=f)
 
